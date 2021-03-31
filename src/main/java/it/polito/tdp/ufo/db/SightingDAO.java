@@ -46,8 +46,8 @@ public class SightingDAO {
 			st2.setString(1, shape);
 			ResultSet res2 = st2.executeQuery() ;
 			
-			res2.first();
-			int count = res2.getInt("cnt");
+			res2.first(); // vado direttamente sulla prima riga e non faccio il ciclo while perchè tanto so già che con il "count" avrò una sola riga
+			int count = res2.getInt("cnt"); 
 			st2.close();
 			conn.close();
 			
